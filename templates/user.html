@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Loan</title>
+	<link rel="stylesheet" href="./../static/user.css" />
+	<link rel="shortcut icon" href="./../static/img/logo.png" />
+
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div id="sitename">
+				<img src="./../static/img/logo.png" alt="Site Logo" />
+				<h1>Thera Bank</h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="/home">Home</a></li>
+					<li><a href="/#s" id="serv">Services</a></li>
+					<li><a href="/#a">About Us</a></li>
+					<li><a href="/prediction">Prediction</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<aside>
+		<ul>
+			<a href="/prediction"><li  class="active">Prediction</li></a>
+			<a href="/last-year-campaign"><li>Last Year Campaign</li></a>
+		</ul>
+	</aside><!--end of the header & navigation side bar-->
+
+	<div class="content">
+		<h1>Personal Loan Prediction</h1>
+		
+		<form autocomplete="on" action="{{ url_for('result') }}" method="POST">
+		<table width="50%" class="tablevar">
+			<tbody>
+				<tr>
+					<td><p class="var-name">Customer Age</p></td>
+					<td><p class="var-name">Customer Income</p></td>
+				</tr>
+				<tr>
+					<td><input class="form-age" type="text" name="Age" placeholder="Age in Completed Years" maxlength="3" required></td>
+					<td><input class="form-income" type="text" name="Income" placeholder="Annual Income in $000" required></td>
+				</tr>
+
+				<tr>
+					<td><p class="var-name">Customer Experience</p></td>
+					<td><p class="var-name">Customer Avg Spending on Credit Card Monthly</p></td>
+				</tr>
+				<tr>
+					<td><input class="form-experience" type="text" name="Experience" placeholder="experience" maxlength="2" required></td>
+					<td><input class="form-CCAvg" type="text" name="CCAvg" placeholder="CC Avg in $000" required></td>
+				</tr>
+
+				<tr>
+					<td><p class="var-name">Customer Education</p></td>
+					<td><p class="var-name">Customer Family Size</p></td>
+				</tr>
+				<tr>
+					<td>
+						<select class="form-education" name="Education" required>
+							<option value="">--Choose Option--</option>
+							<option value="1">Undergrad</option>
+							<option value="2">Graduate</option>
+							<option value="3">Advanced/Professional</option>
+						</select>
+					</td>
+					<td>
+						<select class="form-family" name="Family" required>
+							<option value="">--Choose Option--</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td><p class="var-name">Customer has a House Mortgage</p></td>
+					<td><p class="var-name">Customer has a Securities Account</p></td>
+				</tr>
+				<tr>
+					<td>
+						<select class="form-mortgage" name="Mortgage" required>
+							<option value="">--Choose Option--</option>
+							<option value="0">No</option>
+							<option value="1">Yes</option>
+						</select>
+					</td>
+					<td>
+						<select class="form-security" name="SecuritiesAccount" required>
+							<option value="">--Choose Option--</option>
+							<option value="0">No</option>
+							<option value="1">Yes</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td><p class="var-name">Customer has a CD account</p></td>
+					<td><p class="var-name">Customer use Internet Banking</p></td>
+				</tr>
+				<tr>
+					<td>
+						<select class="form-cdacc" name="CDAccount" required>
+							<option value="">--Choose Option--</option>
+							<option value="0">No</option>
+							<option value="1">Yes</option>
+						</select>
+					</td>
+					<td>
+						<select class="form-online" name="Online" required>
+							<option value="">--Choose Option--</option>
+							<option value="0">No</option>
+							<option value="1">Yes</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" align="center"><p class="var-name">Customer uses Credit Card</p></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<select class="form-opt-name-credit" name="CreditCard" required>
+							<option value="">--Choose Option--</option>
+							<option value="0">No</option>
+							<option value="1">Yes</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td colspan="2" align="center"><input type="submit" class="button" value="Predict"><input type="reset"  class="reset_button" value="Reset"></td>
+				</tr>
+
+
+			</tbody>
+		</table>
+		</form>
+
+		<div class="footer">
+			<p>Copyright &copy; 2021, Marketing Department - Thera Bank. All rights reserved.</p>
+			<p>Terms of Use | Privacy Policy | About Us</p>			
+		</div>
+	</div>
+
+</body>
+</html>

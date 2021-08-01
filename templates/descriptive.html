@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Loan</title>
+	<link rel="stylesheet" href="./../static/user.css" />
+	<link rel="shortcut icon" href="./../static/img/logo.png" />
+    <style>
+        
+        .img-container img{
+            width: 300px;
+            height: 260px; 
+            margin: 10px;
+            border-radius: 8px;
+            border: 2px solid rgb(32, 129, 29);
+            padding: 5px;
+
+        }
+        table{
+            margin: 30px 0 0 30px;
+            /* margin: auto; */
+            background-color: rgba(145, 192, 139,0.7);
+        }
+        table th{
+            padding-top: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div id="sitename">
+				<img src="./../static/img/logo.png" alt="Site Logo" />
+				<h1>Thera Bank</h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="/home">Home</a></li>
+					<li><a href="/#s" id="serv">Services</a></li>
+					<li><a href="/#a">About Us</a></li>
+					<li><a href="/prediction">Prediction</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<aside>
+		<ul>
+			<a href="/prediction"><li>Prediction</li></a>
+			<a href="/last-year-campaign"><li class="active">Last Year Campaign</li></a>
+		</ul>
+	</aside><!--end of the header & navigation side bar-->
+
+	<div class="content">
+		<h1>Descriptive Analysis</h1>
+		
+        <div class="img-container">
+            <div>
+                <table>
+                    <tr>
+                        <th><h3>Pie Chart of Personal Loan</h3></th>
+                        <th>Boxplot of Income vs Personal Loan</th>
+                        <th>Boxplot of CCAvg vs Personal Loan</th>
+                    </tr>
+                    <tr>
+                        <td><img src="./../static/img/descriptives/pie-PL.png" alt="Piechart of Personal Loan"></td>
+                        <td><img src="./../static/img/descriptives/box-income.png" alt="Boxplot of Income"></td>
+                        <td><img src="./../static/img/descriptives/box-ccavg.png" alt="Boxplot of CCAvg"></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Bar Chart of Family by Personal Loan</th>
+                        <th>Stack Bar Chart of Education by Personal Loan</th>
+                        <th>Spearman Rank Correlation Plot </th>
+                    </tr>
+                    <tr>
+                        <td><img src="./../static/img/descriptives/bar-family.png" alt="barchart of family" ></td>
+                        <td><img src="./../static/img/descriptives/stack-edu.png" alt="stackbarchart of eduction"></td>
+                        <td><img src="./../static/img/descriptives/corrplot.png" alt="Corrplot"></td>
+                    </tr>
+                </table>
+                                
+            </div>
+            
+            
+        </div>
+        
+                
+
+		<div class="footer">
+			<p>Copyright &copy; 2021, Marketing Department - Thera Bank. All rights reserved.</p>
+			<p>Terms of Use | Privacy Policy | About Us</p>			
+		</div>
+	</div>
+
+    
+
+</body>
+</html>
+
+
+
